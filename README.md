@@ -1,4 +1,5 @@
 EIS to Pathogen Concentration Prediction
+
 This Python script processes Electrochemical Impedance Spectroscopy (EIS) data stored in .PSSESSION files from a PalmSens potentiostat, generates synthetic data to augment the dataset, trains a Random Forest (RF) model to predict pathogen concentrations, and performs SHAP analysis to identify important features. The code is designed for biosensing applications, specifically for detecting H5N1 concentrations using capacitance features (CRe/F and -CIm/F).
 Features
 
@@ -23,16 +24,6 @@ Libraries:pip install numpy pandas scikit-learn shap matplotlib
 
 .PSSESSION files from a PalmSens potentiostat, stored in a local directory.
 
-Installation
-
-Clone the repository:git clone https://github.com/your-username/eis-to-concentration.git
-cd eis-to-concentration
-
-
-Install dependencies:pip install -r requirements.txt
-
-
-Place .PSSESSION files in the directory specified in the script (default: C:\Users\joshi\Desktop\...\ALL_DATA).
 
 Usage
 
@@ -62,7 +53,6 @@ Notes
 Unique Contribution: The extract_eis_data function is tailored to handle .PSSESSION files, which are not widely supported in open-source tools, making this code valuable for PalmSens users.
 Customization: Adjust n_synthetic_non_zero and n_synthetic_blanks for different synthetic data sizes.
 Validation: Add Cole-Cole plots (plt.plot(X[:, :51], X[:, 51:])) to verify synthetic data quality.
-Limitations: Assumes consistent file naming and 51 frequency points per .PSSESSION file.
 
 License
 MIT License. See LICENSE for details.
